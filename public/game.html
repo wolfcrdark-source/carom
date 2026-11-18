@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta
+      name="viewport"
+      content="width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover"
+    >
+    <title>CAROM</title>
+    <link rel="modulepreload" href="game.js">
+    <style>
+    html,
+    body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      background: #0d0b09;
+      overflow: hidden;
+      touch-action: none;
+      overscroll-behavior: none;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    #wrap {
+      width: 100dvw;
+      height: 100dvh;
+      display: grid;
+      place-items: center;
+    }
+    canvas {
+      display: block;
+      touch-action: none;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <canvas id="table"></canvas>
+    </div>
+    <script src="game.js" type="module"></script>
+  </body>
+</html>
