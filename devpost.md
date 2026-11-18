@@ -3,7 +3,7 @@
 Event: [Reddit's Game of the Day Hackathon](https://redditgameofday2026.devpost.com/)
 Deadline: 8 Dec 2026, 6:00 pm PST (9 Dec 2026, 7:30 am IST)
 
-Status as of 18 Nov 2026, 11:50 pm IST: the game, README, repo, and local video are ready. The private Devvit upload and demo post are **blocked** until u/CTDaRk_Wolf accepts Reddit's developer terms at https://developers.reddit.com/create-account?cli=true (the CLI is already logged in, but `devvit upload` refuses until that page is completed). After that, run `npx devvit upload` from this repo (do **not** publish) and `npx devvit playtest`, then fill in the listing and demo URLs below.
+Status as of 19 Nov 2026, 12:03 am IST (Asia/Calcutta): u/CTDaRk_Wolf has accepted developer terms, and CAROM was privately uploaded as app `carom-daily` version 0.0.1 (`VersionVisibility.PRIVATE`). It is installed on the auto-created playtest subreddit r/carom_daily_dev. Do **not** publish or launch the app for Reddit review until after the hackathon. The demo post URL still needs to be confirmed in a logged-in browser, and the subreddit is almost certainly still private (standard for a Devvit playtest community).
 
 Do not publish / launch the app for Reddit review until after the hackathon.
 
@@ -26,11 +26,11 @@ Place one bumper. Bank the daily shot. How few can you take?
 - Node.js / esbuild
 - Playwright (local playtests and the demo video)
 
-## Links (fill after upload + playtest)
+## Links
 
-- App listing: https://developers.reddit.com/apps/carom-daily
-- Demo subreddit: _pending playtest_ (target name r/carom_daily_dev, under 200 members)
-- Demo post: _pending playtest_
+- App listing: https://developers.reddit.com/apps/carom-daily (private v0.0.1, owner u/CTDaRk_Wolf, 1 install)
+- Demo subreddit: https://www.reddit.com/r/carom_daily_dev (auto-created playtest sub; carom-daily v0.0.1 and Devvit Admin Helper App v0.0.6 are installed). Visibility not confirmable from this network (unauthenticated Reddit API is blocked); treat it as **private** until Community settings are checked. Judges need it public and under 200 members, or [dr-admin-approve](https://developers.reddit.com/apps/dr-admin-approve) installed. A CLI install of `dr-admin-approve` was denied: "You do not have permission to install this app version."
+- Demo post: _pending logged-in confirmation_. `onAppInstall` is wired to create a post titled **CAROM — 18 Nov** (UTC date 2026-11-18), but that handler does not log the URL. `devvit logs r/carom_daily_dev` only showed that the `daily-post` cron was scheduled at 18 Nov 2026, 11:59 pm IST. The scheduler itself runs at 00:05 UTC and would log the URL then. In the sub, look for that title first; if it is missing, use the moderator menu action **Post today's CAROM**.
 - Repository: https://github.com/wolfcrdark-source/carom
 - Video: /workspace/reddit-hack/video/carom.mp4 (12.8 s, silent, under the 1-minute optional-video limit). Upload to YouTube or Vimeo and paste the public link here before submitting.
 
@@ -67,7 +67,7 @@ A complete daily loop you can learn in a few seconds, with a distinct ink-and-br
 
 ## What's next
 
-- Private upload and playtest on a subreddit under 200 members, then a public demo post (or install dr-admin-approve) for judging
+- Confirm today's demo post in r/carom_daily_dev, make the sub public (<200 members) or install dr-admin-approve in the browser, then paste the listing / sub / post URLs into the Devpost project. Do not publish the app.
 - Wire Journey events once the app exists and that beta is available
 - A slightly richer end card (closest-approach ghost on a miss, comment CTA) without adding a second screen
 - After the hackathon, consider publishing so other communities can install it
@@ -78,12 +78,12 @@ An AI assistant (Grok Bot) helped research the official rules, scaffold the Devv
 
 ## Submission checklist
 
-- [ ] Devpost account joined to the hackathon
-- [ ] u/CTDaRk_Wolf accepts developer terms at https://developers.reddit.com/create-account?cli=true
-- [ ] `npx devvit upload` (private only — do not publish)
-- [ ] Playtest post on a public <200-member subreddit, or install dr-admin-approve
+- [x] Devpost account joined to the hackathon
+- [x] u/CTDaRk_Wolf accepted developer terms
+- [x] `npx devvit upload` of private v0.0.1 — do not publish
+- [ ] Confirm the demo post, then make r/carom_daily_dev public (<200 members) or install dr-admin-approve in the browser
 - [ ] App listing URL, demo subreddit URL, and demo post URL pasted into Devpost
-- [ ] README.md in the app root (done in this repo)
+- [x] README.md in the app root (done in this repo)
 - [ ] Optional: upload the <1 min video to YouTube/Vimeo and add the link
-- [ ] Optional: public repo URL (this repo)
+- [x] Optional: public repo URL (https://github.com/wolfcrdark-source/carom)
 - [ ] Optional: developer satisfaction survey (Feedback awards)
