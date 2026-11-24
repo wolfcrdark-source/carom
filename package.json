@@ -21,7 +21,7 @@
     "e2e": "npm run build:client && node tools/e2e.mjs"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.6.6",
+    "@biomejs/biome": "2.6.9",
     "@devvit/web": "0.15.4",
     "@types/node": "24.19.2",
     "devvit": "0.15.4",
